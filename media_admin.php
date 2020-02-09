@@ -7,14 +7,16 @@
 <html>
 <head>
   <title>Media Admin</title>
-  <link rel="stylesheet" href="css/style_content.css" type="text/css">
-  <link rel="stylesheet" href="css/style_table.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style_content.css" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="css/style_table.css" type="text/css"> -->
   <style>
   body{
-  }
-  .container {
-    width: 30%;
 
+  }
+  .menu {
+    padding: 0;
+    margin: 0;
 
   }
 </style>
