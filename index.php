@@ -1,0 +1,55 @@
+<?php
+	include "koneksi.php";
+	if(isset($_SESSION['namauser'])){
+		header("location:media_admin.php?module=home");
+	}
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>sistem informasi restoran elsa</title>
+		<link rel="stylesheet" href="css/style_login.css" type="text/css"/>
+	</head>
+	<body>
+		<div class="formlogin">
+		    <form action="cek_login.php" method="POST" onsubmit="return validasi(this)">
+		    	<table border="0">
+			        <tr>
+			        	<td>User Name</td>
+			        	<td>
+			        		<input type="text" name="inputnamauser">
+			        	</td>
+			    	</tr>
+			    	<tr>
+			       		<td>Password</td>
+			        	<td>
+			        		<input type="password" name="inputpassword">
+			        	</td>
+			        </tr>
+			        <tr>
+			        	<td></td>
+			        	<td>
+			        		<input type="submit" value="Login" name="login">
+			        	</td>
+			        	<td></td>
+		        	</tr>
+		    	</table>
+		    </form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function validasi(form){
+			if(form.inputUsername.value == ""){
+				alert("Anda belum mengisikan Username");
+				form.inputUsername.focus();
+				return false;
+			}
+			if(form.inputPassword.value == ""){
+				alert("Anda belum mengisikan Password.");
+				form.inputPassword.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+</html>
